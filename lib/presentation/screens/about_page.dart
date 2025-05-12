@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../widgets/value_card.dart';
 
@@ -147,8 +148,8 @@ class AboutPage extends StatelessWidget {
                 Expanded(
                   flex: 1,
                   child: Center(
-                    child: Image.asset(
-                      'assets/adeem_logo_dark.png',
+                    child: SvgPicture.asset(
+                      'assets/adeem_logo_dark.svg',
                       height: 200,
                     ),
                   ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../styles/apps_colors.dart';
 import '../screens/about_us_page.dart';
@@ -18,8 +19,8 @@ class CustomAppBar extends StatelessWidget {
           left: 8.0,
           top: 4.0,
         ),
-        child: Image.asset(
-          'assets/images/adeem_logo_light.png',
+        child: SvgPicture.asset(
+          'assets/images/adeem_logo_light.svg',
           height: 30,
         ),
       ),

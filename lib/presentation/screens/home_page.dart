@@ -1,5 +1,6 @@
 import 'package:adeem/presentation/screens/products_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../widgets/featured_product_card.dart';
 import '../widgets/promise_card.dart';
@@ -40,8 +41,8 @@ class HomePageState extends State<HomePage> {
         elevation: 0,
         title: Row(
           children: [
-            Image.asset(
-              'assets/images/adeem_logo_dark.png',
+            SvgPicture.asset(
+              'assets/images/adeem_logo_dark.svg',
               height: 50,
             ),
             SizedBox(width: 10),
@@ -110,8 +111,8 @@ class HomePageState extends State<HomePage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset(
-                    'assets/images/adeem_logo_dark.png',
+                  SvgPicture.asset(
+                    'assets/images/adeem_logo_dark.svg',
                     height: 60,
                     color: Colors.white,
                   ),
@@ -242,8 +243,8 @@ class HomeContent extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(
-                      'assets/images/adeem_logo_dark.png',
+                    SvgPicture.asset(
+                      'assets/images/adeem_logo_dark.svg',
                       height: 120,
                       color: Colors.white,
                     ),
@@ -392,8 +393,8 @@ class HomeContent extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Image.asset(
-                            'assets/images/adeem_logo_dark.png',
+                          SvgPicture.asset(
+                            'assets/images/adeem_logo_dark.svg',
                             height: 60,
                             color: Colors.white,
                           ),

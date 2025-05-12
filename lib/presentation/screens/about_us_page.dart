@@ -1,5 +1,6 @@
 import 'package:adeem/styles/app_text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../styles/apps_colors.dart';
 import '../widgets/custom_app_bar.dart';
@@ -122,8 +123,8 @@ class AboutUsPage extends StatelessWidget {
                         Expanded(
                           flex: 1,
                           child: Center(
-                            child: Image.asset(
-                              'assets/images/adeem_logo_light.png',
+                            child: SvgPicture.asset(
+                              'assets/images/adeem_logo_light.svg',
                               height: 200,
                             ),
                           ),

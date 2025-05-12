@@ -1,6 +1,7 @@
 import 'package:adeem/styles/app_text_styles.dart';
 import 'package:adeem/styles/apps_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'dart:js' as js;
 
@@ -186,8 +187,8 @@ class _LandingPageState extends State<LandingPage> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Image.asset(
-                                  'assets/images/adeem_logo_dark.png',
+                                SvgPicture.asset(
+                                  'assets/images/adeem_logo_dark.svg',
                                   height: 80,
                                 ),
                                 SizedBox(height: 8),
