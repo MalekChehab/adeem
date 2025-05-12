@@ -1,3 +1,4 @@
+import 'package:adeem/presentation/screens/products.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -29,7 +30,7 @@ class CustomAppBar extends StatelessWidget {
       ),
       actions: [
         TextButton(
-          onPressed: () {},
+          onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => Products(),)),
           child: const Text(
             'Our Products',
             style: TextStyle(
