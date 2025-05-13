@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../styles/apps_colors.dart';
 import '../screens/about_us_page.dart';
+import '../screens/landing_page.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -20,9 +21,12 @@ class CustomAppBar extends StatelessWidget {
           left: 8.0,
           top: 4.0,
         ),
-        child: SvgPicture.asset(
-          'assets/images/adeem_logo_light.svg',
-          height: 30,
+        child: GestureDetector(
+          onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => const LandingPage(),)),
+          child: SvgPicture.asset(
+            'assets/images/adeem_logo_light.svg',
+            height: 30,
+          ),
         ),
       ),
       actionsPadding: const EdgeInsets.only(

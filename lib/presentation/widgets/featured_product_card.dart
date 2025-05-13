@@ -22,7 +22,7 @@ class FeaturedProductCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
+            color: AppColors.secondary.withValues(alpha: 0.1),
             blurRadius: 10,
             offset: Offset(0, 5),
           ),
@@ -31,7 +31,7 @@ class FeaturedProductCard extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(8),
         child: Container(
-          color: Colors.white,
+          color: AppColors.surface,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

@@ -8,19 +8,19 @@ class ProductsPage extends StatelessWidget {
   final List<Product> breadProducts = [
     Product(
       name: 'Whole Grain Artisan Bread',
-      price: 6.99,
+      price: '6.99',
       description: 'Our signature bread made with organic whole wheat flour, oats, sunflower seeds, black seeds, flax, chia, and sesame seeds. Enhanced with honey and olive oil, with the benefits of sourdough.',
-      imagePath: 'assets/images/whole_grain_bread.jpg',
+      imagePath: 'assets/images/multi_grain_bread.png',
     ),
     Product(
       name: 'Multi-Seed Loaf',
-      price: 7.99,
+      price: '7.99',
       description: 'A hearty loaf packed with nutritious seeds including flax, chia, sunflower, and sesame seeds. Perfect for sandwiches or as a side for soups.',
       imagePath: 'assets/images/multi_seed_bread.png',
     ),
     Product(
       name: 'Sourdough Boule',
-      price: 5.99,
+      price: '5.99',
       description: 'Traditional sourdough bread with a crispy crust and soft interior. Made with our own sourdough starter for authentic flavor and digestive benefits.',
       imagePath: 'assets/images/sourdough_bread.jpg',
     ),
@@ -29,13 +29,13 @@ class ProductsPage extends StatelessWidget {
   final List<Product> cookieProducts = [
     Product(
       name: 'Dark Chocolate Oatmeal Cookies',
-      price: 2.49,
+      price: '2.49',
       description: 'Delicious cookies made with butter, oats, and premium dark chocolate. Available in regular and mini sizes.',
       imagePath: 'assets/images/chocolate_cookies.jpg',
     ),
     Product(
       name: 'Mini Cookie Assortment',
-      price: 8.99,
+      price: '8.99',
       description: 'A box of 24 mini cookies in various flavors. Perfect for parties or as a gift.',
       imagePath: 'assets/images/mini_cookies.jpg',
     ),

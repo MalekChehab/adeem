@@ -7,41 +7,28 @@ import '../widgets/custom_app_bar.dart';
 import '../widgets/product_card.dart';
 
 class Products extends StatelessWidget {
+  // List of products
   final List<Product> breadProducts = [
     Product(
-      name: 'Whole Grain Artisan Bread',
-      price: 6.99,
+      name: 'Multi-Seed Bread',
+      price: '300,000',
       description:
           'Our signature bread made with organic whole wheat flour, oats, sunflower seeds, black seeds, flax, chia, and sesame seeds. Enhanced with honey and olive oil, with the benefits of sourdough.',
-      imagePath: 'assets/images/whole_grain_bread.jpg',
-    ),
-    Product(
-      name: 'Multi-Seed Loaf',
-      price: 7.99,
-      description:
-          'A hearty loaf packed with nutritious seeds including flax, chia, sunflower, and sesame seeds. Perfect for sandwiches or as a side for soups.',
-      imagePath: 'assets/images/multi_seed_bread.png',
-    ),
-    Product(
-      name: 'Sourdough Boule',
-      price: 5.99,
-      description:
-          'Traditional sourdough bread with a crispy crust and soft interior. Made with our own sourdough starter for authentic flavor and digestive benefits.',
-      imagePath: 'assets/images/sourdough_bread.jpg',
+      imagePath: 'assets/images/multi_grain_bread.png',
     ),
   ];
 
   final List<Product> cookieProducts = [
     Product(
       name: 'Dark Chocolate Oatmeal Cookies',
-      price: 2.49,
+      price: '250,000',
       description:
           'Delicious cookies made with butter, oats, and premium dark chocolate. Available in regular and mini sizes.',
       imagePath: 'assets/images/chocolate_cookies.jpg',
     ),
     Product(
       name: 'Mini Cookie Assortment',
-      price: 8.99,
+      price: '150,000',
       description:
           'A box of 24 mini cookies in various flavors. Perfect for parties or as a gift.',
       imagePath: 'assets/images/mini_cookies.jpg',
@@ -63,51 +50,101 @@ class Products extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Our Products',
-                    style: AppTextStyles.header,
-                  ),
-                  SizedBox(height: 8),
-                  Text(
-                    'A healthier option that doesn\'t compromise on taste',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.black87,
-                      fontStyle: FontStyle.italic,
-                    ),
+                  Center(
+                    child: Text('Our Products', style: AppTextStyles.header),
                   ),
                   SizedBox(height: 40),
 
                   // Bread Section
-                  Text(
-                    'Artisan Breads',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF8B4513),
-                    ),
-                  ),
+                  Text('Breads', style: AppTextStyles.header),
                   SizedBox(height: 8),
                   Text(
                     'Our breads are made with organic ingredients, no additives or preservatives',
-                    style: TextStyle(fontSize: 14, color: Colors.black87),
+                    style: AppTextStyles.italicDetails,
                   ),
                   SizedBox(height: 24),
-                  GridView.builder(
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 3,
-                      childAspectRatio: 0.8,
-                      crossAxisSpacing: 20,
-                      mainAxisSpacing: 20,
+                  SizedBox(
+                    width: 600,
+                    child: Card(
+                      color: AppColors.surface,
+                      elevation: 2,
+                      shadowColor: AppColors.secondary.withValues(alpha: 0.1),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 250,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(8),
+                              ),
+                              child: Image.asset(
+                                'assets/images/multi_grain_bread.png',
+                                width: double.infinity,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(26.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Multi-Grain Bread',
+                                  style: AppTextStyles.subHeader,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                SizedBox(height: 8),
+                                Text(
+                                  '300,000 L.L.',
+                                  style: AppTextStyles.details,
+                                ),
+                                SizedBox(height: 12),
+                                Text(
+                                  'Our signature bread made with organic whole wheat flour, oats, sunflower seeds, black seeds, flax, chia, and sesame seeds. Enhanced with honey and olive oil, with the benefits of sourdough.',
+                                  style: AppTextStyles.italicDetails,
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                SizedBox(height: 16),
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  style: ButtonStyle(
+                                    backgroundColor: WidgetStatePropertyAll(
+                                      AppColors.primary,
+                                    ),
+                                  ),
+                                  child: Text(
+                                    'Learn More',
+                                    style: AppTextStyles.buttonText,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    itemCount: breadProducts.length,
-                    itemBuilder: (context, index) {
-                      return ProductCard(product: breadProducts[index]);
-                    },
                   ),
 
+                  // GridView.builder(
+                  //   shrinkWrap: true,
+                  //   physics: NeverScrollableScrollPhysics(),
+                  //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  //     crossAxisCount: 3,
+                  //     // childAspectRatio: 0.8,
+                  //     // crossAxisSpacing: 20,
+                  //     // mainAxisSpacing: 20,
+                  //   ),
+                  //   itemCount: breadProducts.length,
+                  //   itemBuilder: (context, index) {
+                  //     return ProductCard(product: breadProducts[index]);
+                  //   },
+                  // ),
                   SizedBox(height: 48),
 
                   // Cookies Section

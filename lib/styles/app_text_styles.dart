@@ -22,21 +22,18 @@ class AppTextStyles {
   static const TextStyle appBarText = TextStyle(
     fontSize: 18,
     color: AppColors.primary,
-    fontFamily: 'Karma',
   );
 
   // Detail text style using Karma
   static const TextStyle details = TextStyle(
     fontSize: 18,
-    fontWeight: FontWeight.normal,
     color: AppColors.secondary,
   );
 
   static const TextStyle italicDetails = TextStyle(
     fontSize: 18,
-    fontWeight: FontWeight.normal,
-    color: AppColors.secondary,
     fontStyle: FontStyle.italic,
+    color: AppColors.secondary,
   );
 
   static const TextStyle buttonText = TextStyle(
@@ -59,8 +56,6 @@ class AppTextStyles {
 
   static const TextStyle footerDetails = TextStyle(
     fontSize: 16,
-    fontFamily: 'Karma',
-    fontWeight: FontWeight.normal,
     color: AppColors.background,
   );
 }
