@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../data/models/product_model.dart';
 import '../../styles/apps_colors.dart';
+import '../screens/product_info_page.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -23,16 +24,19 @@ class ProductCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
-              height: 250,
-              child: ClipRRect(
-                borderRadius: BorderRadius.vertical(
-                  top: Radius.circular(8),
-                ),
-                child: Image.asset(
-                  product.imagePath,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
+            Hero(
+              tag: product.imagePath,
+              child: SizedBox(
+                height: 250,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(8),
+                  ),
+                  child: Image.asset(
+                    product.imagePath,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
@@ -61,7 +65,11 @@ class ProductCard extends StatelessWidget {
                   ),
                   SizedBox(height: 16),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => ProductInfoPage(product: product),
+                      ),
+                    ),
                     style: ButtonStyle(
                       backgroundColor: WidgetStatePropertyAll(
                         AppColors.primary,

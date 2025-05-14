@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 
 import 'package:adeem/styles/app_text_styles.dart';
 import '../../data/models/product_model.dart';
+import '../../data/products_info/ingredients.dart';
+import '../../data/products_info/nutrition_facts.dart';
 import '../../styles/apps_colors.dart';
 import '../widgets/custom_app_bar.dart';
 import '../widgets/product_card.dart';
 
+
 class Products extends StatelessWidget {
+
   // List of products
   final List<Product> breadProducts = [
     Product(
@@ -15,6 +19,12 @@ class Products extends StatelessWidget {
       description:
           'Our signature bread made with organic whole wheat flour, oats, sunflower seeds, black seeds, flax, chia, and sesame seeds. Enhanced with honey and olive oil, with the benefits of sourdough.',
       imagePath: 'assets/images/multi_grain_bread.png',
+      ingredients: breadIngredients,
+      nutritionFactsPerPiece: breadSliceNutrition,
+      nutritionFactsTotal: totalBreadNutrition,
+      servingName: 'Slice',
+      servingWeight: 30,
+      totalWeight: 450,
     ),
   ];
 
@@ -24,54 +34,108 @@ class Products extends StatelessWidget {
       price: '45',
       description: 'Three delightful mini cookies, perfect for little hands or a quick sweet craving.',
       imagePath: 'assets/images/mini_cookies.jpg',
+      ingredients: cookieIngredients,
+      nutritionFactsPerPiece: oneMiniCookieNutrition,
+      nutritionFactsTotal: threeMiniCookieNutrition,
+      servingName: 'Cookie',
+      servingWeight: 10,
+      totalWeight: 30,
     ),
     Product(//1
       name: 'Cookies (2pcs)',
       price: '70',
       description: 'Two soft and flavorful cookies, ideal for a quick treat on the go.',
       imagePath: 'assets/images/cookies_2_pcs.png',
+      ingredients: cookieIngredients,
+      nutritionFactsPerPiece: oneCookieNutrition,
+      nutritionFactsTotal: twoCookieNutrition,
+      servingName: 'Cookie',
+      servingWeight: 24,
+      totalWeight: 48,
     ),
     Product(//2
       name: 'Mini Cookies (10pcs)',
       price: '150',
       description: 'A bundle of 10 irresistible mini cookies, perfect for sharing happiness.',
       imagePath: 'assets/images/mini_cookies.jpg',
+      ingredients: cookieIngredients,
+      nutritionFactsPerPiece: oneMiniCookieNutrition,
+      nutritionFactsTotal: tenMiniCookieNutrition,
+      servingName: 'Cookie',
+      servingWeight: 10,
+      totalWeight: 100,
     ),
     Product(//3
       name: 'Cookies Box (7pcs)',
       price: '250',
       description: 'Seven freshly baked cookies in a compact box, made for sharing or indulging.',
       imagePath: 'assets/images/cookies_7_pcs.png',
+      ingredients: cookieIngredients,
+      nutritionFactsPerPiece: oneCookieNutrition,
+      nutritionFactsTotal: sevenCookieNutrition,
+      servingName: 'Cookie',
+      servingWeight: 24,
+      totalWeight: 168,
     ),
     Product(//4
       name: 'Cookies Gift Box (12pcs)',
       price: '600',
       description: 'A beautifully crafted gift box with 12 premium cookies—an elegant way to spread joy.',
       imagePath: 'assets/images/cookies_gift_box_12_pcs.jpg',
+      ingredients: cookieIngredients,
+      nutritionFactsPerPiece: oneCookieNutrition,
+      nutritionFactsTotal: twelveCookieNutrition,
+      servingName: 'Cookie',
+      servingWeight: 24,
+      totalWeight: 288,
     ),
     Product(//5
       name: 'Cookies Gift Box (16pcs)',
       price: '900',
       description: 'A luxurious gift box filled with 16 decadent cookies, perfect for any special occasion.',
       imagePath: 'assets/images/cookies_gift_box_16_pcs.jpg',
+      ingredients: cookieIngredients,
+      nutritionFactsPerPiece: oneCookieNutrition,
+      nutritionFactsTotal: sixteenCookieNutrition,
+      servingName: 'Cookie',
+      servingWeight: 24,
+      totalWeight: 384,
     ),
     Product(//6
       name: 'Mini Cookies Gift Box (45pcs)',
       price: '1,000',
       description: 'A treasure trove of 45 bite-sized delights in a gift box, crafted to impress and indulge.',
       imagePath: 'assets/images/mini_cookies.jpg',
+      ingredients: cookieIngredients,
+      nutritionFactsPerPiece: oneMiniCookieNutrition,
+      nutritionFactsTotal: fortyFiveMiniCookieNutrition,
+      servingName: 'Cookie',
+      servingWeight: 10,
+      totalWeight: 450,
     ),
     Product(//7
       name: 'Cookies 1/2 kg',
       price: '550',
       description: 'Half a kilogram of rich, flavorful cookies—ideal for gatherings or indulgent moments.',
       imagePath: 'assets/images/cookies_half_kg.png',
+      ingredients: cookieIngredients,
+      nutritionFactsPerPiece: oneCookieNutrition,
+      nutritionFactsTotal: twentyOneCookieNutrition,
+      servingName: 'Cookie',
+      servingWeight: 24,
+      totalWeight: 500,
     ),
     Product(//8
       name: 'Mini Cookies 1/2 kg',
       price: '600',
       description: 'Half a kilogram of our finest mini cookies, perfect for sharing, gifting, or savoring solo.',
       imagePath: 'assets/images/mini_cookies_half_kg.png',
+      ingredients: cookieIngredients,
+      nutritionFactsPerPiece: oneMiniCookieNutrition,
+      nutritionFactsTotal: fiftyMiniCookieNutrition,
+      servingName: 'Cookie',
+      servingWeight: 10,
+      totalWeight: 500,
     ),
   ];
 

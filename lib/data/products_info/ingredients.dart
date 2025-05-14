@@ -1,0 +1,33 @@
+final List<String> breadIngredients = [
+  'Whole Wheat Flour',
+  'White Wheat Flour',
+  'Organic Oats',
+  'Sunflower Seeds',
+  'Black Seeds',
+  'Flax Seeds',
+  'Chia Seeds',
+  'Sesame Seeds',
+  'Honey',
+  'Olive Oil',
+  'Sea Salt',
+  'Yeast (minimal amount)',
+  'Milk Powder',
+  'Sourdough Starter',
+  'Water',
+];
+
+final List<String> cookieIngredients = [
+  'Organic Oats',
+  'Flour',
+  'Premium Dark Chocolate',
+  'Butter',
+  'Sugar',
+  'Brown Sugar',
+  'Organic Eggs (minimal amount)',
+  'Pure Vanilla Extract',
+  'Baking Powder',
+  'Baking Soda',
+  'Lemon Essence',
+  'Sea Salt',
+  'Cinnamon',
+];
