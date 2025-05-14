@@ -1,4 +1,3 @@
-import 'package:adeem/presentation/screens/products_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -20,7 +19,6 @@ class HomePageState extends State<HomePage> {
 
   final List<Widget> _pages = [
     HomeContent(),
-    ProductsPage(),
     AboutPage(),
     ContactPage(),
   ];
