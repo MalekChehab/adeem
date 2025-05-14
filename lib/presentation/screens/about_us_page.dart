@@ -1,3 +1,4 @@
+import 'package:adeem/presentation/screens/products.dart';
 import 'package:adeem/styles/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -218,7 +219,11 @@ class AboutUsPage extends StatelessWidget {
                           ),
                           SizedBox(height: 24),
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () => Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => Products(),
+                              ),
+                            ),
                             style: ButtonStyle(
                               backgroundColor: WidgetStatePropertyAll(AppColors.background),
                               foregroundColor: WidgetStatePropertyAll(AppColors.primary),

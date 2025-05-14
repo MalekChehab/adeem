@@ -1,3 +1,4 @@
+import 'package:adeem/presentation/screens/products.dart';
 import 'package:adeem/styles/app_text_styles.dart';
 import 'package:adeem/styles/apps_colors.dart';
 import 'package:flutter/material.dart';
@@ -73,7 +74,11 @@ class _LandingPageState extends State<LandingPage> {
                             bottom: 120.0,
                           ),
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () => Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => Products(),
+                              ),
+                            ),
                             style: ButtonStyle(
                               backgroundColor: WidgetStatePropertyAll(AppColors.background),
                             ),
@@ -122,7 +127,7 @@ class _LandingPageState extends State<LandingPage> {
                           Expanded(
                             child: FeaturedProductCard(
                               imagePath: 'assets/images/cookies_mini.png',
-                              title: 'Artisanal Cookies',
+                              title: 'Oats Cookies',
                               description: 'Delicious cookies carefully crafted with oats, dark chocolates and the finest all-natural ingredients.',
                               onPressed: () {},
                             ),
