@@ -24,15 +24,12 @@ class ProductInfoPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Product Image
-                  Hero(
-                    tag: product.imagePath,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(8),
-                      child: Image.asset(
-                        product.imagePath,
-                        height: 350,
-                        fit: BoxFit.cover,
-                      ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.asset(
+                      product.imagePath,
+                      height: 350,
+                      fit: BoxFit.cover,
                     ),
                   ),
                   const SizedBox(height: 20),
@@ -50,86 +47,115 @@ class ProductInfoPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  // Description
-                  Text(
-                    product.description,
-                    style: AppTextStyles.details,
-                  ),
-                  const SizedBox(height: 10),
-                  // Price
                   Text(
                     '${product.price},000 L.L.',
                     style: AppTextStyles.italicDetails,
                   ),
-                  const Divider(height: 30, thickness: 1),
-                  // Ingredients
-                  Text(
-                    'Ingredients',
-                    style: AppTextStyles.subHeader,
-                  ),
                   const SizedBox(height: 10),
-                  ...product.ingredients.map((ingredient) => Text(
-                    '• $ingredient',
+                  Text(
+                    product.description,
                     style: AppTextStyles.details,
-                  )),
-                  const Divider(height: 30, thickness: 1),
-                  // Nutrition Facts
-                  Text(
-                    'Nutrition Facts',
-                    style: AppTextStyles.subHeader,
                   ),
-                  const SizedBox(height: 10),
-                  // Per Piece
-                  Text(
-                    'Per Serving: 1 ${product.servingName} (${product.servingWeight}g)',
-                    style: AppTextStyles.italicDetails.copyWith(
-                      color: AppColors.primary,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-                  ...product.nutritionFactsPerPiece.entries.map((entry) => Padding(
-                    padding: const EdgeInsets.only(right: 80),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          entry.key,
-                          style: AppTextStyles.details,
-                        ),
-                        Text(
-                          entry.value,
-                          style: AppTextStyles.details,
-                        ),
-                      ],
-                    ),
-                  )),
                   const Divider(height: 30, thickness: 1),
 
-                  Text(
-                    'Total Nutrition Value (${product.totalWeight}g)',
-                    style: AppTextStyles.italicDetails.copyWith(
-                      color: AppColors.primary,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-                  ...product.nutritionFactsTotal.entries.map((entry) => Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 2.0),
+                  // Ingredients
+                  Container(
+                    color: AppColors.primary.withValues(alpha: 0.1),
+                    padding: const EdgeInsets.all(24),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          entry.key,
-                          style: AppTextStyles.details,
-                        ),
-                        Text(
-                          entry.value,
-                          style: AppTextStyles.details,
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Ingredients',
+                              style: AppTextStyles.subHeader,
+                            ),
+                            const SizedBox(height: 10),
+                            ...product.ingredients.map((ingredient) => Text(
+                              '• $ingredient',
+                              style: AppTextStyles.details,
+                            )),
+                          ],
                         ),
                       ],
                     ),
-                  )),
+                  ),
+
+                  const Divider(height: 30, thickness: 1),
+                  // Nutrition Facts
+                  Padding(
+                    padding: const EdgeInsets.all(24),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Nutrition Facts',
+                          style: AppTextStyles.subHeader,
+                        ),
+                        const SizedBox(height: 10),
+                        // Per Piece
+                        Text(
+                          'Per Serving: 1 ${product.servingName} (${product.servingWeight}g)',
+                          style: AppTextStyles.italicDetails.copyWith(
+                            color: AppColors.primary,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        ...product.nutritionFactsPerPiece.entries.map((entry) => Padding(
+                          padding: const EdgeInsets.only(right: 80),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                entry.key,
+                                style: AppTextStyles.details,
+                              ),
+                              Text(
+                                entry.value,
+                                style: AppTextStyles.details,
+                              ),
+                            ],
+                          ),
+                        )),
+                      ],
+                    ),
+                  ),
+                  const Divider(height: 30, thickness: 1),
+
+                  Padding(
+                    padding: const EdgeInsets.all(24),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Total Nutrition Value (${product.totalWeight}g)',
+                          style: AppTextStyles.italicDetails.copyWith(
+                            color: AppColors.primary,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        ...product.nutritionFactsTotal.entries.map((entry) => Padding(
+                          padding: const EdgeInsets.only(right: 80),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                entry.key,
+                                style: AppTextStyles.details,
+                              ),
+                              Text(
+                                entry.value,
+                                style: AppTextStyles.details,
+                              ),
+                            ],
+                          ),
+                        )),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),

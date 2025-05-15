@@ -24,19 +24,16 @@ class ProductCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Hero(
-              tag: product.imagePath,
-              child: SizedBox(
-                height: 250,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(8),
-                  ),
-                  child: Image.asset(
-                    product.imagePath,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
-                  ),
+            SizedBox(
+              height: 250,
+              child: ClipRRect(
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(8),
+                ),
+                child: Image.asset(
+                  product.imagePath,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),

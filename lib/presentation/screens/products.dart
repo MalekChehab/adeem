@@ -16,8 +16,13 @@ class Products extends StatelessWidget {
     Product(
       name: 'Multi-Seed Bread',
       price: '300',
-      description:
-          'Our signature bread made with organic whole wheat flour, oats, sunflower seeds, black seeds, flax, chia, and sesame seeds. Enhanced with honey and olive oil, with the benefits of sourdough.',
+      description: 'Our signature bread is crafted with organic whole wheat flour, oats, sunflower seeds, black seeds, flax, chia, and sesame seeds. Enhanced with honey and olive oil, and naturally fermented with the benefits of sourdough. Packed with health benefits, including: '
+          '\n- Made with organic, wholesome ingredients. '
+          '\n- Packed with dietary fiber for improved digestive health. '
+          '\n- Sugar-free for a healthier lifestyle. '
+          '\n- Gentle on the stomach, making it suitable for sensitive digestion. '
+          '\n- Promotes bowel health with natural nutrients. '
+          '\n- Contains beneficial bacteria from sourdough for a healthy gut.',
       imagePath: 'assets/images/multi_grain_bread.png',
       ingredients: breadIngredients,
       nutritionFactsPerPiece: breadSliceNutrition,
