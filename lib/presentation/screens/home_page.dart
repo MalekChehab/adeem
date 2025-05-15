@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../widgets/featured_product_card.dart';
 import '../widgets/promise_card.dart';
-import 'about_page.dart';
 import 'contact_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,7 +18,6 @@ class HomePageState extends State<HomePage> {
 
   final List<Widget> _pages = [
     HomeContent(),
-    AboutPage(),
     ContactPage(),
   ];
 
